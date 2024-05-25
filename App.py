@@ -7,9 +7,9 @@ import requests, io
 import PIL.Image
 from urllib.request import urlopen
 
-with open('Data\movie_data.json', 'r+', encoding='utf-8') as f:
+with open('Data\movie_data.json', 'r+', encoding='utf-8') as f: #update movie data path
     data = json.load(f)
-with open('Data\movie_titles.json', 'r+', encoding='utf-8') as f:
+with open('Data\movie_titles.json', 'r+', encoding='utf-8') as f: #update movie title path
     movie_titles = json.load(f)
 hdr = {'User-Agent': 'Mozilla/5.0'}
 
@@ -58,7 +58,7 @@ st.set_page_config(
 
 
 def run():
-    img1 = Image.open('./meta/logo.jpg')
+    img1 = Image.open('./meta/logo.jpg') #update this path 
     img1 = img1.resize((250, 250), )
     st.image(img1, use_column_width=False)
     st.title("Movie Recommender System")
